@@ -15,7 +15,7 @@ public class Base {
 	
 	public static void initialization() {
 		
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/BrowserDriver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 	}
@@ -24,7 +24,7 @@ public class Base {
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		
 		try {
-			FileHandler.copy(src, new File("C:\\Users\\Mahavir\\eclipse-workspace\\Selenium-Training\\amazonwebsiteTest\\Schreenshot\\" + testMethodName + "_" +" .png" ));
+			FileHandler.copy(src, new File("C:\\Users\\Mahavir\\git\\nikewebsite\\amazonwebsiteTest\\Schreenshot\\" + testMethodName + "_" +" .png" ));
 		} catch (IOException e) {
 			
 			e.printStackTrace();
