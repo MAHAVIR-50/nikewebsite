@@ -39,7 +39,7 @@ public class SearchShoesTest {
 	}
 	
 	
-	@Test
+	@Test(invocationCount = 1)
 	public void validateShoesPrice() throws InterruptedException {
 		
 		AmazonHomePage.fashionLink(driver);
